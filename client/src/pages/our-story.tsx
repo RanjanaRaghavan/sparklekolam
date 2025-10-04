@@ -1,4 +1,3 @@
-import { User } from "lucide-react";
 
 export default function OurStory() {
   return (
@@ -14,7 +13,7 @@ export default function OurStory() {
         {/* Content Section */}
         <div className="space-y-6" data-testid="story-content">
           <p className="text-lg text-foreground leading-relaxed">
-            Welcome to Revathy's Rangolis, where tradition meets sparkle! My journey began with a deep love for the ancient Indian art of rangoli - those beautiful patterns that have adorned doorsteps and courtyards for centuries.
+            Welcome to Revathi's Rangolis, where tradition meets sparkle! My journey began with a deep love for the ancient Indian art of rangoli - those beautiful patterns that have adorned doorsteps and courtyards for centuries.
           </p>
           <p className="text-lg text-foreground leading-relaxed">
             Growing up, I watched my grandmother create intricate rangoli designs during festivals, using colored powders and flower petals. Her dedication and artistry inspired me to preserve this beautiful tradition in a new, modern way.
@@ -30,17 +29,17 @@ export default function OurStory() {
           </p>
         </div>
 
-        {/* Photo Placeholder */}
+        {/* Revathi's Photo */}
         <div className="relative">
           <div 
             className="aspect-square bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 rounded-2xl overflow-hidden shadow-2xl"
-            data-testid="revathi-photo-placeholder"
+            data-testid="revathi-photo"
           >
-            <div className="w-full h-full flex flex-col items-center justify-center p-8">
-              <User className="w-24 h-24 text-muted-foreground mb-4" />
-              <p className="text-muted-foreground text-center font-medium">Revathi's Photo</p>
-              <p className="text-sm text-muted-foreground text-center mt-2">(Upload photo here)</p>
-            </div>
+            <img 
+              src="/images/Revathi.png" 
+              alt="Revathi - Founder of Revathy's Rangolis" 
+              className="w-full h-full object-cover"
+            />
           </div>
           {/* Decorative Elements */}
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>

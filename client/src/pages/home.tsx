@@ -1,10 +1,47 @@
 import { useQuery } from "@tanstack/react-query";
 import { CheckCircle, Truck, Heart } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
+import { FallingDiyas } from "@/components/FallingDiyas";
 import { Product } from "@shared/schema";
 
+// Sample products for GitHub Pages deployment when API is not available
+const sampleProducts: Product[] = [
+  {
+    id: "1",
+    name: "Butterfly Rangoli",
+    description: "Elegant butterfly design with multicolor rhinestones",
+    price: 89900,
+    imageUrl: "/images/Butterfly_Kolam.png",
+    inStock: 1,
+  },
+  {
+    id: "2",
+    name: "Pink Diya Rangoli",
+    description: "Traditional Diya with Pink rhinestones",
+    price: 79900,
+    imageUrl: "/images/Diya_Kolam.png",
+    inStock: 1,
+  },
+  {
+    id: "3",
+    name: "Golden Spade Rangoli",
+    description: "Intricate Spade design with golden rhinestones",
+    price: 99900,
+    imageUrl: "/images/Spade_Kolam.png",
+    inStock: 1,
+  },
+  {
+    id: "4",
+    name: "Ruby Heart Rangoli",
+    description: "Vibrant heart with ruby rhinestones",
+    price: 84900,
+    imageUrl: "/images/Heart_Kolam.png",
+    inStock: 1,
+  },
+];
+
 export default function Home() {
-  const { data: products, isLoading } = useQuery<Product[]>({
+  const { data: products, isLoading, error } = useQuery<Product[]>({
     queryKey: ["/api/products"],
   });
 
@@ -17,6 +54,7 @@ export default function Home() {
 
   return (
     <div>
+      <FallingDiyas />
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -63,7 +101,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-testid="products-grid">
-            {products?.map((product) => (
+            {(products || sampleProducts)?.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>

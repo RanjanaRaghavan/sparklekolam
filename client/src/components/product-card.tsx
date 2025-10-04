@@ -1,5 +1,6 @@
 import { Plus } from "lucide-react";
-import { useCart } from "@/hooks/use-cart";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
 import { Product } from "@shared/schema";
 
 interface ProductCardProps {
@@ -54,6 +55,7 @@ const productIcons = [
 
 export function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
+  const { toast } = useToast();
   
   const productIndex = parseInt(product.id) - 1;
   const colorClass = productColors[productIndex] || productColors[0];
@@ -69,6 +71,13 @@ export function ProductCard({ product }: ProductCardProps) {
       name: product.name,
       price: product.price,
       imageUrl: product.imageUrl,
+    });
+    
+    // Show success toast
+    toast({
+      title: "Added to cart!",
+      description: `${product.name} has been added to your cart.`,
+      duration: 3000,
     });
   };
 
@@ -92,10 +101,15 @@ export function ProductCard({ product }: ProductCardProps) {
         
         {/* Add to Cart Button */}
         <button 
-          onClick={handleAddToCart}
-          className="absolute bottom-3 right-3 w-12 h-12 bg-primary rounded-full flex items-center justify-center transform hover:scale-125 transition-all duration-300 shadow-lg hover:shadow-2xl z-10"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            handleAddToCart();
+          }}
+          className="absolute bottom-3 right-3 w-12 h-12 bg-primary rounded-full flex items-center justify-center transform hover:scale-125 transition-all duration-300 shadow-lg hover:shadow-2xl z-10 cursor-pointer"
           data-testid={`button-add-to-cart-${product.id}`}
           aria-label={`Add ${product.name} to cart`}
+          type="button"
         >
           <Plus className="w-6 h-6 text-primary-foreground" strokeWidth={3} />
         </button>

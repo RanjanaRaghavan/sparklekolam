@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">Revathy's Rangolis</h3>
+            <h3 className="text-xl font-serif font-bold mb-4">Revathi's Rangolis</h3>
             <p className="text-background/80">
               Handcrafted rhinestone rangoli art for your special celebrations
             </p>
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-background/20 text-center text-background/60">
-          <p>&copy; 2024 Revathy's Rangolis. All rights reserved. Made with ❤️ in India</p>
+          <p>&copy; 2024 Revathi's Rangolis. All rights reserved. Made with ❤️ in India</p>
         </div>
       </div>
     </footer>

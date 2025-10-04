@@ -1,5 +1,5 @@
 import { X, Minus, Plus, Trash2 } from "lucide-react";
-import { useCart } from "@/hooks/use-cart";
+import { useCart } from "@/contexts/CartContext";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 

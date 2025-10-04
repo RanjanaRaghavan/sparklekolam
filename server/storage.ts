@@ -34,34 +34,34 @@ export class MemStorage implements IStorage {
     const sampleProducts: Product[] = [
       {
         id: "1",
-        name: "Pink Peacock Rangoli",
-        description: "Elegant peacock design with pink rhinestones",
+        name: "Butterfly Rangoli",
+        description: "Elegant butterfly design with multicolor rhinestones",
         price: 89900, // ₹899 in paisa
-        imageUrl: null,
+        imageUrl: "/images/Butterfly_Kolam.png",
         inStock: 1,
       },
       {
         id: "2", 
-        name: "Green Lotus Rangoli",
-        description: "Sacred lotus with emerald rhinestones",
+        name: "Pink Diya Rangoli",
+        description: "Traditional Diya with Pink rhinestones",
         price: 79900, // ₹799 in paisa
-        imageUrl: null,
+        imageUrl: "/images/Diya_Kolam.png",
         inStock: 1,
       },
       {
         id: "3",
-        name: "Golden Mandala Rangoli", 
-        description: "Intricate mandala with golden rhinestones",
+        name: "Golden Spade Rangoli", 
+        description: "Intricate Spade design with golden rhinestones",
         price: 99900, // ₹999 in paisa
-        imageUrl: null,
+        imageUrl: "/images/Spade_Kolam.png",
         inStock: 1,
       },
       {
         id: "4",
-        name: "Blue Diya Rangoli",
-        description: "Traditional diya with sapphire rhinestones", 
+        name: "Ruby heart Rangoli",
+        description: "Vibrant heart with ruby rhinestones", 
         price: 84900, // ₹849 in paisa
-        imageUrl: null,
+        imageUrl: "/images/Heart_Kolam.png",
         inStock: 1,
       },
       {

@@ -1,6 +1,6 @@
 # Overview
 
-This is a full-stack e-commerce application for selling handcrafted rhinestone rangoli art called "Revathy's Rangolis". The application features a product catalog, shopping cart functionality, and a checkout process. Built with React on the frontend and Express on the backend, it uses TypeScript throughout for type safety.
+This is a full-stack e-commerce application for selling handcrafted rhinestone rangoli art called "Revathi's Rangolis". The application features a product catalog, shopping cart functionality, and a checkout process. Built with React on the frontend and Express on the backend, it uses TypeScript throughout for type safety.
 
 # User Preferences
 
