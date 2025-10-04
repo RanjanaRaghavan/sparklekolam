@@ -11,18 +11,15 @@ A beautiful e-commerce website showcasing traditional Indian rangoli designs ado
 - **📖 Our Story** - Learn about Revathi's passion for rangoli art
 - **🎨 Modern UI** - Clean design with off-white background and pink accents
 
-## 🚀 Live Demo
-
-Visit the live website: [https://ranjanaraghavan.github.io/sparklekolam/](https://ranjanaraghavan.github.io/sparklekolam/)
-
 ## 🛠️ Technology Stack
 
 - **Frontend**: React + TypeScript + Vite
+- **Backend**: Express.js + Node.js
 - **UI Components**: Shadcn UI + Tailwind CSS
-- **Routing**: Wouter (with hash routing for GitHub Pages)
+- **Routing**: Wouter
 - **State Management**: React Context + TanStack Query
+- **Database**: PostgreSQL with Drizzle ORM
 - **Icons**: Lucide React
-- **Deployment**: GitHub Pages
 
 ## 📁 Project Structure
 
@@ -35,29 +32,32 @@ sparklekolam/
 │   │   ├── contexts/       # React Context providers
 │   │   └── lib/            # Utilities and configurations
 │   └── public/             # Static assets
-├── server/                 # Express.js backend (not used in GitHub Pages)
+├── server/                 # Express.js backend
 ├── shared/                 # Shared TypeScript schemas
-└── .github/workflows/      # GitHub Actions for deployment
+└── package.json            # Project dependencies and scripts
 ```
 
 ## 🚀 Deployment
 
-This project is automatically deployed to GitHub Pages using GitHub Actions. The deployment happens on every push to the main branch.
+### Vercel Deployment (Recommended)
 
-### Manual Deployment Steps
+This app is optimized for Vercel deployment:
 
-1. **Enable GitHub Pages** in repository settings:
-   - Go to Settings → Pages
-   - Source: GitHub Actions
-
-2. **Push changes** to trigger deployment:
+1. **Install Vercel CLI**:
    ```bash
-   git add .
-   git commit -m "Deploy to GitHub Pages"
-   git push origin main
+   npm i -g vercel
    ```
 
-3. **Monitor deployment** in the Actions tab
+2. **Deploy to Vercel**:
+   ```bash
+   vercel
+   ```
+
+3. **Or connect your GitHub repository** to Vercel dashboard for automatic deployments.
+
+### Local Development
+
+To run it locally:
 
 ## 🔧 Development
 
@@ -72,16 +72,19 @@ This project is automatically deployed to GitHub Pages using GitHub Actions. The
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (runs both frontend and backend)
 npm run dev
 
 # Build for production
 npm run build
+
+# Start production server
+npm start
 ```
 
 ## 🎨 Design Features
 
-- **Hash Routing**: Compatible with GitHub Pages static hosting
+- **Browser Routing**: Clean URLs with proper navigation
 - **Responsive Design**: Works perfectly on desktop and mobile
 - **Accessibility**: Proper ARIA labels and keyboard navigation
 - **Performance**: Optimized with lazy loading and efficient bundling
