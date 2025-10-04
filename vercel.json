@@ -5,14 +5,7 @@
       "src": "server/index.ts",
       "use": "@vercel/node",
       "config": {
-        "includeFiles": ["dist/**", "shared/**", "client/public/**"]
-      }
-    },
-    {
-      "src": "client/**",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/public"
+        "includeFiles": ["shared/**", "client/public/**"]
       }
     }
   ],
@@ -23,7 +16,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/client/$1"
+      "dest": "/server/index.ts"
     }
   ],
   "env": {
